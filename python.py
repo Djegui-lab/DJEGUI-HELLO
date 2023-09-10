@@ -6,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 st.set_page_config(page_title='djégui', layout='wide')
 # Numéro WhatsApp (remplacez par votre numéro)
-whatsapp_number = "+2126052758743"  # Utilisez votre propre numéro WhatsApp
+whatsapp_number = "+212605275874"  # Utilisez votre propre numéro WhatsApp
 
 # Créez une URL WhatsApp avec le numéro pré-rempli
 whatsapp_url = f"https://wa.me/{whatsapp_number}"
