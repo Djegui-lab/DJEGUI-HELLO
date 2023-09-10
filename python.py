@@ -37,7 +37,7 @@ if st.button("Salutation"):
            st.markdown(f"[Cliquez ici pour appeler via WhatsApp]({whatsapp_url})")
 
     else:
-        st.write("Veuillez entrer votre nom.")
+        st.write("Veuillez entrer votre nom et votre centre d'intérêt.")
 st.write("AUTEUR : Mr.DJEGUI-WAGUÉ")
 st.title('VISUALISATION')
 st.subheader("merci pour votre analyse")
