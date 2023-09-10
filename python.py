@@ -12,7 +12,7 @@ st.title("Application d'Assurance Auto")
 numero_telephone = "+1234567890"
 
 # Lien hypertexte pour appeler le numéro de téléphone
-lien_telephone = f"[Appeler le cabinet de courtage]({numero_telephone})", key='call_button'):
+lien_telephone = f"[Appeler le cabinet de courtage]({numero_telephone})"
 st.markdown(lien_telephone, unsafe_allow_html=True)
 
 
