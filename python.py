@@ -5,15 +5,12 @@ import sqlite3
 import seaborn as sns
 import matplotlib.pyplot as plt
 st.set_page_config(page_title='djégui', layout='wide')
-# Titre de l'application
-st.title("Application d'Assurance Auto")
-
 # Numéro de téléphone du cabinet de courtage
 numero_telephone = "+1234567890"
 
 # Lien hypertexte pour appeler le numéro de téléphone
-lien_telephone = f"[Appeler le cabinet de courtage]({numero_telephone})"
-st.markdown(lien_telephone, unsafe_allow_html=True)
+lien_telephone = f'<a href="tel:{numero_telephone}">Appeler le cabinet de courtage</a>'
+components.html(lien_telephone, height=30
 
 
 # Saisie du nom de l'utilisateur
