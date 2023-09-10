@@ -5,7 +5,19 @@ import sqlite3
 import seaborn as sns
 import matplotlib.pyplot as plt
 st.set_page_config(page_title='djégui', layout='wide')
+# Numéro WhatsApp (remplacez par votre numéro)
+whatsapp_number = "+2126052758743"  # Utilisez votre propre numéro WhatsApp
 
+# Créez une URL WhatsApp avec le numéro pré-rempli
+whatsapp_url = f"https://wa.me/{whatsapp_number}"
+
+# Titre de l'application
+st.title("Application d'Assurance Auto")
+
+# Bouton pour permettre à l'utilisateur d'appeler via WhatsApp
+if st.button("Appeler via WhatsApp"):
+    st.write(f"Appel en cours via WhatsApp vers le numéro {whatsapp_number}...")
+    st.markdown(f"[Cliquez ici pour appeler via WhatsApp]({whatsapp_url})")
 # Saisie du nom de l'utilisateur
 user_name = st.text_input("Entrez votre nom et prénom")
 # Saisie des centres d'intérêt
