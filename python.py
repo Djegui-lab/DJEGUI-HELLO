@@ -16,7 +16,7 @@ if st.button("Salutation"):
        interests_list = interests.split("\n")
        for interest in interests_list:
            st.write(f"Bonjour {user_name} ! merci pour votre analyse. ")
-           st.write("je suis un model qui a été fabriquer par Mr.DJEGUI-WAGUÉ.")
+           st.write("je suis un model qui a été fabriqué par Mr.DJEGUI-WAGUÉ.")
            st.write("Votre centre d'intérê est :")
            st.write("- ", interest)
            st.write("")
