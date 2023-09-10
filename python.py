@@ -160,3 +160,7 @@ if st.button("Obtenir un devis"):
     else:
         st.warning("Veuillez remplir tous les champs.")
 
+
+st.dataframe(df)
+
+
