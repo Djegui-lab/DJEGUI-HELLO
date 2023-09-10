@@ -6,8 +6,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 st.set_page_config(page_title='djégui', layout='wide')
 
-
-
 # Saisie du nom de l'utilisateur
 user_name = st.text_input("Entrez votre nom et prénom")
 # Saisie des centres d'intérêt
