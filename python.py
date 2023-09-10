@@ -33,7 +33,8 @@ if st.button("Salutation"):
            st.write("- ", interest)
            st.write("")
            st.write("vous êtes la bienvenu(e)",user_name,"!", "vous pouvez continuer à analyser votre base de données dès maintenant ! ")
-
+           st.write("vous souhaitez nous contacter ?")
+           st.markdown(f"[Cliquez ici pour appeler via WhatsApp]({whatsapp_url})")
 
     else:
         st.write("Veuillez entrer votre nom.")
