@@ -121,3 +121,42 @@ st.write("merci pour votre visite", user_name,"!")
 ok=df[df["Age_du_conducteur"]<=35.57] [["Annees_assurance","Puissance_fiscale"]].std()
 st.dataframe(ok)
 conn.close()
+
+
+
+# Créez un formulaire pour collecter les informations
+st.title("Votre demande de devis AUTO")
+
+conducteur = st.number_input("Nom du conducteur")
+annee_circulation = st.number_input("Année de circulation")
+nombre_de_sinistres = st.number_input("Nombre de sinistres")
+puissance_fiscale = st.number_input("Puissance fiscale")
+annee_assurance = st.number_input("Année d'assurance")
+age_du_conducteur = st.number_input("Âge du conducteur")
+date_de_permis = st.number_input("Date de permis de conduire")
+risque = st.number_input("Risque")
+
+# Ajoutez un bouton pour soumettre les informations
+if st.button("Obtenir un devis"):
+    # Connectez-vous à la base de données SQLite
+    conn = sqlite3.connect("nex_data_assurance.db")
+    cursor = conn.cursor()
+
+    # Assurez-vous que les données sont présentes
+    if (annee_assurance and conducteur and age_du_conducteur and date_de_permis and
+            risque and nombre_de_sinistres and annee_circulation and puissance_fiscale):
+        # Insérez les données dans la base de données
+        cursor.execute("""
+            INSERT INTO nex_data_assurance (Conducteur,annee_circulation,Nombre_de_sinistres,Puissance_fiscale,Annees_assurance, Age_du_conducteur, Date_de_permis, risque)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        """, (conducteur,annee_circulation, nombre_de_sinistres,puissance_fiscale,annee_assurance,age_du_conducteur, date_de_permis, risque))
+
+        # Validez l'insertion des données
+        conn.commit()
+        st.success("votre demande de devis a bien été prise en compte !")
+
+        # Fermez la connexion à la base de données
+        conn.close()
+    else:
+        st.warning("Veuillez remplir tous les champs.")
+
