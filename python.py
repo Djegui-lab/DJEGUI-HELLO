@@ -20,7 +20,7 @@ if st.button("Salutation"):
            st.write("Votre centre d'intérê est :")
            st.write("- ", interest)
            st.write("")
-           st.write("vous êtes la bienvenu(e)",user_name,"!", "vous pouvez continuez à analyser votre base de données dès maintenant ! ")
+           st.write("vous êtes la bienvenu(e)",user_name,"!", "vous pouvez continuer à analyser votre base de données dès maintenant ! ")
 
 
     else:
